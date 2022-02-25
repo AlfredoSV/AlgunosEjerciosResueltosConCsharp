@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace AlgunosEjerciosResueltosConCsharp
 {
@@ -8,7 +9,9 @@ namespace AlgunosEjerciosResueltosConCsharp
         {
             //Ejercicio1(5, 3);
             //Ejercicio2(24, 5);
-            Ejercicio3();
+            //Ejercicio3();
+            //Ejercicio4();
+            Ejercicio5();
         }
 
         /*1) El usuario tecleará dos números (x e y), y el programa 
@@ -56,6 +59,47 @@ namespace AlgunosEjerciosResueltosConCsharp
             {
                 y = Int32.Parse(Console.ReadLine());
                 Console.WriteLine($"El producto de {x} por {y} es:{x * y}");
+            }
+
+        }
+
+        /*4) Crear un programa que pida al usuario dos números reales. Si el segundo no es cero, mostrará el 
+        resultado de dividir entre el primero y el segundo. Por el contrario, si el segundo número es cero, 
+        escribirá “Error: No se puede dividir entre cero”.*/
+        public static void Ejercicio4()
+        {
+            decimal x = 0.00m, y = 0.00m;
+
+            y = Math.Round(decimal.Parse(Console.ReadLine()), 2);
+
+            if (y == 0.00m)
+            {
+                Console.WriteLine("Error: No se puede dividir entre cero");
+            }
+            else
+            {
+                x = Math.Round(decimal.Parse(Console.ReadLine()), 2);
+                Console.WriteLine($"Resultado de divisón de {x} / {y} es:{Math.Round(x / y, 2)}");
+            }
+
+        }
+
+        //5) Crear un programa que pida una letra al usuario y diga si se trata de una vocal.
+        public static void Ejercicio5()
+        {
+            var letra = Console.ReadLine().ToLower();
+
+            var vocales = new char[] { 'a', 'e', 'i', 'o', 'u' };
+            var esVocal = false;
+
+            if (letra.Length > 1 || letra.Equals(""))
+            {
+                Console.WriteLine("Solo está permitido ingresar una letra");
+            }
+            else
+            {
+                esVocal = vocales.Contains(Convert.ToChar(letra));
+                Console.WriteLine($"Es vocal:{esVocal}");
             }
 
         }
