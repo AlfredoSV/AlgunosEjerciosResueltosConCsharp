@@ -7,7 +7,8 @@ namespace AlgunosEjerciosResueltosConCsharp
         static void Main(string[] args)
         {
             //Ejercicio1(5, 3);
-            Ejercicio2(24, 5);
+            //Ejercicio2(24, 5);
+            Ejercicio3();
         }
 
         /*1) El usuario tecleará dos números (x e y), y el programa 
@@ -41,8 +42,21 @@ namespace AlgunosEjerciosResueltosConCsharp
         cualquier número es 0". Si se ha tecleado un número distinto de cero, se pedirá al usuario un segundo 
         número y se mostrará el producto de ambos.
         */
-        private static void Ejercicio()
+        private static void Ejercicio3()
         {
+            int x, y;
+
+            x = Int32.Parse(Console.ReadLine());
+
+            if (x == 0)
+            {
+                Console.WriteLine("El producto de 0 por cualquier número es 0");
+            }
+            else
+            {
+                y = Int32.Parse(Console.ReadLine());
+                Console.WriteLine($"El producto de {x} por {y} es:{x * y}");
+            }
 
         }
     }
