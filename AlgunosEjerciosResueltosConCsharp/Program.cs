@@ -11,7 +11,8 @@ namespace AlgunosEjerciosResueltosConCsharp
             //Ejercicio2(24, 5);
             //Ejercicio3();
             //Ejercicio4();
-            Ejercicio5();
+            //Ejercicio5();
+            Ejercicio6();
         }
 
         /*1) El usuario tecleará dos números (x e y), y el programa 
@@ -103,5 +104,23 @@ namespace AlgunosEjerciosResueltosConCsharp
             }
 
         }
+
+        /*6) Crear un programa que pida al usuario dos números enteros y diga "Uno de los números es positivo", 
+        "Los dos números son positivos" o bien "Ninguno de los números es positivo", según corresponda.*/
+
+        public static void Ejercicio6()
+        {
+            Console.WriteLine("Ingrese el número 1:");
+            var numero1 = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ingrese el número 2:");
+            var numero2 = Int32.Parse(Console.ReadLine());
+
+
+            var resultadoFrase = numero1 >= 0 && numero2 >= 0 ? "Los dos números son positivos" : numero1 >= 0 || numero2 >= 0 ? "Uno de los números es positivo" : "Ninguno de los números es positivo";
+
+            Console.WriteLine(resultadoFrase);
+        }
+
     }
 }
