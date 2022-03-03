@@ -12,7 +12,8 @@ namespace AlgunosEjerciosResueltosConCsharp
             //Ejercicio3();
             //Ejercicio4();
             //Ejercicio5();
-            Ejercicio6();
+            //Ejercicio6();
+            Extra1();
         }
 
         /*1) El usuario tecleará dos números (x e y), y el programa 
@@ -120,6 +121,30 @@ namespace AlgunosEjerciosResueltosConCsharp
             var resultadoFrase = numero1 >= 0 && numero2 >= 0 ? "Los dos números son positivos" : numero1 >= 0 || numero2 >= 0 ? "Uno de los números es positivo" : "Ninguno de los números es positivo";
 
             Console.WriteLine(resultadoFrase);
+        }
+
+        /*Extra1: Sumar los número que se encuentran en el rango 1-20 sin utilizar una estructura de control repetitica (for,foreach,while,do..while)*/
+
+        public static void Extra1()
+        {
+
+            var inicio = 1;
+            var fin = 5;
+            var suma = Suma(inicio, fin);
+
+            Console.WriteLine(suma);
+
+
+        }
+
+        public static int Suma(int inicio, int fin)
+        {
+            if (fin == inicio)
+                return inicio;
+
+            else
+                return Suma(inicio, fin - 1) + fin;
+
         }
 
     }
